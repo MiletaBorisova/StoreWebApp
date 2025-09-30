@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ShopWebApp.Data.Entities;
 
 namespace ShopWebApp.Data
 {
@@ -9,5 +10,8 @@ namespace ShopWebApp.Data
             : base(options)
         {
         }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
     }
 }
